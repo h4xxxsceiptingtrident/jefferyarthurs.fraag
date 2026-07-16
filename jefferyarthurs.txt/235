@@ -1,0 +1,60 @@
+local player = game.Players.LocalPlayer
+
+-- Предупреждения перед крашем
+game.StarterGui:SetCore("SendNotification", {
+    Title = "ROBLOX SECURITY",
+    Text = "CRITICAL VIOLATION DETECTED\nAccount termination in progress...",
+    Duration = 8,
+})
+
+wait(2)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "ACCOUNT TERMINATED",
+    Text = "jefferyarthurs Anti-Cheat\nAll data logged. Client shutdown initiated.",
+    Duration = 10,
+})
+
+wait(1.5)
+
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    Text = "[ROBLOX MODERATION] " .. player.Name .. " - Permanent termination. Client will now be closed.",
+    Color = Color3.fromRGB(200, 0, 0),
+    Font = Enum.Font.GothamBold
+})
+
+wait(2)
+
+-- === МЕТОДЫ КРАША ===
+
+-- Метод 1 (самый надёжный)
+for i = 1, 9999 do
+    pcall(function()
+        player:Kick("\n\nACCOUNT TERMINATED")
+        Instance.new("Part").Parent = workspace
+        game:GetService("TeleportService"):Teleport(game.PlaceId)
+    end)
+end
+
+-- Метод 2 (дополнительно)
+task.spawn(function()
+    while true do
+        pcall(function()
+            local t = Instance.new("Part")
+            t.Parent = workspace
+            t:Destroy()
+            game:GetService("ContentProvider"):PreloadAsync({game})
+        end)
+        task.wait()
+    end
+end)
+
+-- Метод 3
+game:GetService("RunService").Heartbeat:Connect(function()
+    pcall(function()
+        game.Players.LocalPlayer:Kick("")
+        workspace:ClearAllChildren()
+    end)
+end)
+
+print("CRASH SEQUENCE INITIATED")
